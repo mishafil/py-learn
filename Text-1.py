@@ -1,0 +1,5 @@
+name = input()
+print('Your name is ' ,name )
+age = input()
+print('Your age is ' ,age)
+print ('In year' ,2117-age, 'you\'ll have 100 years' )
