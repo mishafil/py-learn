@@ -1,21 +1,18 @@
 playing = True
-polozhnyak = { 'Rock' : 'Scissors',
+da_rules = { 'Rock' : 'Scissors',
 		'Scissors' : 'Paper',
 		'Paper' : 'Rock' }
-def testinp(item) :
-	return True if item in polozhnyak else False;
 while playing :
 	pl1, pl2 = input('Player1`s choice: '), input('Player2`s choice: ')
-	if testinp(pl1) == False or testinp(pl2) == False :
+	if pl1 not in da_rules or pl2 not in da_rules :
 		print('Wrong item entered!')	
 	elif pl1 == pl2 :
 		print('No winner!')
-	elif polozhnyak[pl1] == pl2 :
+	elif da_rules[pl1] == pl2 :
 		print('Player1 Won!')
-	elif polozhnyak[pl2] == pl1 :
+	elif da_rules[pl2] == pl1 :
 		print('Player2 Won!')
-	print('Wanna play one more time? (y/n)')
-	ans = input()
+	ans = input('Wanna play one more time? (y/n) ')
 	playing = True if ans == 'y' else False
 print('Nice game!')
 	
